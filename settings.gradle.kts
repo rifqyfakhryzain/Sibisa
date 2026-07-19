@@ -22,6 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SIBISA"
+rootProject.name = "Tubes"
 include(":app")
- 
