@@ -4,11 +4,17 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
 import android.widget.ImageButton;
-import androidx.activity.EdgeToEdge;
+import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.core.view.GravityCompat;
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.provider.MediaStore;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import android.widget.Toast;
+import androidx.annotation.NonNull;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,22 +33,103 @@ public class MainActivity extends AppCompatActivity {
         btnArCamera = findViewById(R.id.btnArCamera);
 
         // Aksi ketika tombol Kuis diklik
-        btnKuis.setOnClickListener(v -> {
-            // Intent intent = new Intent(MainActivity.this, KuisActivity.class);
-            // startActivity(intent);
-        });
+        if (btnKuis != null) {
+            btnKuis.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, KuisActivity.class);
+                startActivity(intent);
+            });
+        }
 
         // Aksi ketika tombol Fakta Buah diklik
-        btnFaktaBuah.setOnClickListener(v -> {
-            // Intent intent = new Intent(MainActivity.this, FaktaBuahActivity.class);
-            // startActivity(intent);
-        });
+        if (btnFaktaBuah != null) {
+            btnFaktaBuah.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, FaktaBuahActivity.class);
+                startActivity(intent);
+            });
+        }
+
+        // Aksi ketika tombol 3rd Activity diklik
+        if (btnThirdActivity != null) {
+            btnThirdActivity.setOnClickListener(v -> {
+                // Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
+                // startActivity(intent);
+            });
+        }
 
         // Aksi ketika tombol AR diklik
-        btnArCamera.setOnClickListener(v -> {
-            // Di sini nanti kita arahkan ke ArCameraActivity
-            // Intent intent = new Intent(MainActivity.this, ArCameraActivity.class);
-            // startActivity(intent);
-        });
+        if (btnArCamera != null) {
+            btnArCamera.setOnClickListener(v -> {
+                if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                        != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(this,
+                            new String[]{Manifest.permission.CAMERA}, 100);
+                } else {
+                    openCamera();
+                }
+            });
+        }
+
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        ImageButton btnMenu = findViewById(R.id.btnMenu);
+        ImageView btnCloseDrawer = findViewById(R.id.btnCloseDrawer);
+
+        if (btnMenu != null) {
+            btnMenu.setOnClickListener(v -> {
+                drawerLayout.openDrawer(GravityCompat.START);
+            });
+        }
+
+        if (btnCloseDrawer != null) {
+            btnCloseDrawer.setOnClickListener(v -> {
+                drawerLayout.closeDrawer(GravityCompat.START);
+            });
+        }
+
+        // Aksi Sidebar Menu
+        View menuTentang = findViewById(R.id.menu_tentang);
+        View menuPengaturan = findViewById(R.id.menu_pengaturan);
+        View menuKeluar = findViewById(R.id.menu_keluar);
+
+        if (menuTentang != null) {
+            menuTentang.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, TentangActivity.class);
+                startActivity(intent);
+                drawerLayout.closeDrawer(GravityCompat.START);
+            });
+        }
+
+        if (menuPengaturan != null) {
+            menuPengaturan.setOnClickListener(v -> {
+                // Handle Pengaturan click
+                drawerLayout.closeDrawer(GravityCompat.START);
+            });
+        }
+
+        if (menuKeluar != null) {
+            menuKeluar.setOnClickListener(v -> {
+                finish(); // Example for logout/exit
+            });
+        }
+    }
+
+    private void openCamera() {
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Tidak ada aplikasi kamera ditemukan", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 100) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                openCamera();
+            } else {
+                Toast.makeText(this, "Izin kamera diperlukan untuk fitur ini", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }
