@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_cream"
+    tools:context=".DetailApelActivity">
+
+    <!-- Tombol Back tetap di atas (Sticky) -->
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:elevation="10dp"
+        android:padding="12dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Bagian Atas: Gambar dan Judul -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="32dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImage"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="80dp"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/apel" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvDescriptionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:text="Fakta Apel"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardImage" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Bagian Bawah: Container Putih dengan Border Hitam -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_detail_description"
+                android:orientation="vertical"
+                android:padding="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 Fakta Singkat"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="  Hai Teman-teman! Siapa di sini yang suka makan buah apel? Selain rasanya yang manis, garing, dan segar, ternyata apel itu buah yang sangat hebat, lho. Yuk, kita intip 3 fakta seru dan unik tentang apel yang bakal bikin kamu kagum!."
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:lineSpacingExtra="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. Apel Bisa Berenang! 🌊"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="  Pernah tidak kamu mencoba memasukkan apel ke dalam baskom berisi air? Coba deh, apelnya pasti mengapung dan tidak tenggelam! Kenapa ya? Rahasianya adalah karena 25% bagian dari buah apel sebenarnya berisi udara. Jadi, apel punya pelampung alami di dalamnya!."
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:lineSpacingExtra="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. Punya Ribuan Saudara Kembar 👩‍👩‍👦‍👦"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="  Kalau di supermarket kita biasanya cuma lihat apel merah dan apel hijau, ternyata di seluruh dunia ada sekitar 7.500 jenis apel yang berbeda! Ada yang warnanya kuning, bahkan ada yang rasanya mirip madu. Kalau kamu mencoba makan satu jenis apel setiap hari, kamu butuh waktu 20 tahun untuk mencicipi semuanya! Banyak sekali, kan?."
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:lineSpacingExtra="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3. Paket Lengkap: Si Sehat yang Punya Aturan Pakai 🎒️"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="  Apel itu seperti kotak bekal yang penuh dengan hadiah untuk tubuhmu. Di dalam satu buah apel, tersimpan Vitamin C yang menjaga kamu agar tidak mudah sakit, serta Vitamin B yang bikin kamu selalu bersemangat sepanjang hari. Selain itu, ada serat khusus bernama pektin yang bertugas membuat perutmu selalu nyaman dan bebas sembelit. Bahkan, hebatnya lagi, nutrisi di dalam apel juga bisa menjadi teman baik untuk otakmu agar kamu lebih mudah fokus saat belajar di kelas!"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:lineSpacingExtra="6dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="  Namun, sama seperti pahlawan super yang punya kelemahan, apel juga punya beberapa hal yang harus kita perhatikan. Karena apel mengandung gula alami dan asam, kita tidak boleh malas menyikat gigi setelah memakannya agar kuman tidak membuat gigi kita berlubang. Selain itu, saat asyik makan apel, pastikan untuk selalu membuang biji kecilnya yang berwarna hitam ya, karena biji apel mengandung zat yang tidak baik untuk kesehatan tubuh kita."
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:lineSpacingExtra="6dp" />
+
+                <!-- Spacer bawah agar terlihat rapi -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
