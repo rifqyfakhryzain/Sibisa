@@ -12,7 +12,7 @@
         android:id="@+id/btnBack"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:src="@drawable/baseline_arrow_back_ios_new_24"
+        android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/black" />
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Rifqy\nA\nB\nC\nD"
+        android:text="\nA. Eflin Christian Hutapea\nB. Ihsan Rizky Muharrom\nC. Rifqy Fakhry Zain\nD. Muhammad Shahril Ramdan\nE. Ayudia Afina"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
