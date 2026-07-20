@@ -1,5 +1,6 @@
 package com.rifqy.sibisa;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,13 +25,40 @@ public class FaktaBuahActivity extends AppCompatActivity {
         TextView itemMangga = findViewById(R.id.itemMangga);
         TextView itemSalak = findViewById(R.id.itemSalak);
 
-        // Contoh: Set click listener jika diperlukan
-        /*
-        itemApel.setOnClickListener(v -> openDetail("Apel"));
-        itemJeruk.setOnClickListener(v -> openDetail("Jeruk"));
-        itemPisang.setOnClickListener(v -> openDetail("Pisang"));
-        itemMangga.setOnClickListener(v -> openDetail("Mangga"));
-        itemSalak.setOnClickListener(v -> openDetail("Salak"));
-        */
+        // Set click listener untuk item Apel
+        if (itemApel != null) {
+            itemApel.setOnClickListener(v -> {
+                Intent intent = new Intent(FaktaBuahActivity.this, DetailApelActivity.class);
+                startActivity(intent);
+            });
+        }
+
+        if (itemJeruk != null) {
+            itemJeruk.setOnClickListener(v -> {
+                Intent intent = new Intent(FaktaBuahActivity.this, DetailJerukActivity.class);
+                startActivity(intent);
+            });
+        }
+
+        if (itemPisang != null) {
+            itemPisang.setOnClickListener(v -> {
+                Intent intent = new Intent(FaktaBuahActivity.this, DetailPisangActivity.class);
+                startActivity(intent);
+            });
+        }
+
+        if (itemMangga != null) {
+            itemMangga.setOnClickListener(v -> {
+                Intent intent = new Intent(FaktaBuahActivity.this, DetailManggaActivity.class);
+                startActivity(intent);
+            });
+        }
+
+        if (itemSalak != null) {
+            itemSalak.setOnClickListener(v -> {
+                Intent intent = new Intent(FaktaBuahActivity.this, DetailSalakActivity.class);
+                startActivity(intent);
+            });
+        }
     }
 }
