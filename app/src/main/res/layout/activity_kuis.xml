@@ -48,14 +48,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="32dp">
+            android:padding="24dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgQuestion"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/apel" />
 
             <TextView
                 android:id="@+id/tvQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Buah apa yang berwarna merah dan berbentuk bulat?"
+                android:text="Buah apakah ini?"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
