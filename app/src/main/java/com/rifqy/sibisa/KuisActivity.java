@@ -4,13 +4,20 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
+import android.app.Dialog;
+import android.view.Window;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.content.Intent;
+import android.widget.ProgressBar;
+
 
 public class KuisActivity extends AppCompatActivity {
-
+    private TextView tvProgress;
+    private ProgressBar progressQuiz;
     private TextView tvQuestion;
     private ImageView imgQuestion;
     private Button btnOption1, btnOption2, btnOption3;
@@ -25,6 +32,8 @@ public class KuisActivity extends AppCompatActivity {
 
         tvQuestion = findViewById(R.id.tvQuestion);
         imgQuestion = findViewById(R.id.imgQuestion);
+        tvProgress = findViewById(R.id.tvProgress);
+        progressQuiz = findViewById(R.id.progressQuiz);
         btnOption1 = findViewById(R.id.btnOption1);
         btnOption2 = findViewById(R.id.btnOption2);
         btnOption3 = findViewById(R.id.btnOption3);
@@ -40,6 +49,7 @@ public class KuisActivity extends AppCompatActivity {
         btnOption1.setOnClickListener(v -> checkAnswer(0));
         btnOption2.setOnClickListener(v -> checkAnswer(1));
         btnOption3.setOnClickListener(v -> checkAnswer(2));
+
     }
 
     private void initQuestions() {
@@ -57,41 +67,62 @@ public class KuisActivity extends AppCompatActivity {
     }
 
     private void showQuestion() {
+
         if (currentQuestionIndex < questionList.size()) {
+
             Question q = questionList.get(currentQuestionIndex);
+
             tvQuestion.setText(q.getQuestion());
             imgQuestion.setImageResource(q.getImageResId());
+
             btnOption1.setText(q.getOptions()[0]);
             btnOption2.setText(q.getOptions()[1]);
             btnOption3.setText(q.getOptions()[2]);
+
+            // Update Progress
+            tvProgress.setText("Soal " + (currentQuestionIndex + 1) + " / " + questionList.size());
+
+            progressQuiz.setMax(questionList.size());
+            progressQuiz.setProgress(currentQuestionIndex + 1);
+
         } else {
+
             showScore();
+
         }
+
     }
 
     private void checkAnswer(int selectedIndex) {
-        if (selectedIndex == questionList.get(currentQuestionIndex).getCorrectAnswerIndex()) {
+
+        Question question = questionList.get(currentQuestionIndex);
+
+        boolean isCorrect =
+                selectedIndex == question.getCorrectAnswerIndex();
+
+        if (isCorrect) {
             score++;
-            Toast.makeText(this, "Benar!", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Salah!", Toast.LENGTH_SHORT).show();
         }
 
-        currentQuestionIndex++;
-        showQuestion();
+        showAnswerDialog(
+                isCorrect,
+                question.getOptions()[question.getCorrectAnswerIndex()]
+        );
+
     }
 
     private void showScore() {
-        tvQuestion.setText("Kuis Selesai!\nSkor Anda: " + score + "/" + questionList.size());
-        btnOption1.setVisibility(android.view.View.GONE);
-        btnOption2.setVisibility(android.view.View.GONE);
-        btnOption3.setVisibility(android.view.View.GONE);
-        
-        Button btnReset = new Button(this);
-        btnReset.setText("Ulangi Kuis");
-        btnReset.setBackgroundTintList(android.content.res.ColorStateList.valueOf(getResources().getColor(android.R.color.holo_green_dark)));
-        // Add more styling or just keep it simple for now
-        // For a better UI, I should probably have a results layout
+
+        Intent intent = new Intent(KuisActivity.this, HasilKuisActivity.class);
+
+        intent.putExtra("score", score);
+
+        intent.putExtra("total", questionList.size());
+
+        startActivity(intent);
+
+        finish();
+
     }
 
     private static class Question {
@@ -111,5 +142,59 @@ public class KuisActivity extends AppCompatActivity {
         public int getImageResId() { return imageResId; }
         public String[] getOptions() { return options; }
         public int getCorrectAnswerIndex() { return correctAnswerIndex; }
+    }
+
+    private void showAnswerDialog(boolean isCorrect, String correctAnswer) {
+
+        Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_answer);
+
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawable(
+                    new ColorDrawable(Color.TRANSPARENT)
+            );
+        }
+
+        ImageView imgCharacter = dialog.findViewById(R.id.imgCharacter);
+        TextView tvStatus = dialog.findViewById(R.id.tvStatus);
+        TextView tvMessage = dialog.findViewById(R.id.tvMessage);
+        TextView tvCorrectAnswer = dialog.findViewById(R.id.tvCorrectAnswer);
+        Button btnNext = dialog.findViewById(R.id.btnNext);
+
+        if (isCorrect) {
+
+            imgCharacter.setImageResource(R.drawable.anak_kecil);
+
+            tvStatus.setText("YEAY!");
+            tvStatus.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
+
+            tvMessage.setText("Jawaban Kamu Benar 🎉");
+
+        } else {
+
+            imgCharacter.setImageResource(R.drawable.anak_kecil);
+
+            tvStatus.setText("Yah...");
+            tvStatus.setTextColor(getResources().getColor(android.R.color.holo_orange_dark));
+
+            tvMessage.setText("Jawaban Kamu Salah\nTetap Semangat Belajar 😊");
+
+        }
+
+        tvCorrectAnswer.setText(correctAnswer);
+
+        btnNext.setOnClickListener(v -> {
+
+            dialog.dismiss();
+
+            currentQuestionIndex++;
+
+            showQuestion();
+
+        });
+
+        dialog.setCancelable(false);
+        dialog.show();
     }
 }
