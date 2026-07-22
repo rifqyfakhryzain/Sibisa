@@ -55,6 +55,7 @@
         <activity
             android:name=".DetailSalakActivity"
             android:exported="false" />
+        <activity android:name=".HasilKuisActivity" />
     </application>
 
 </manifest>
