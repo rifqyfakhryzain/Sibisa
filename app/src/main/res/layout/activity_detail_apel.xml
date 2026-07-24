@@ -83,7 +83,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3 Fakta Singkat"
+                    android:text="Fakta Singkat"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -93,7 +93,7 @@
                     android:id="@+id/tvDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="  Hai Teman-teman! Siapa di sini yang suka makan buah apel? Selain rasanya yang manis, garing, dan segar, ternyata apel itu buah yang sangat hebat, lho. Yuk, kita intip 3 fakta seru dan unik tentang apel yang bakal bikin kamu kagum!."
+                    android:text="Apel adalah buah manis dan renyah asal Asia Tengah yang punya ribuan jenis di seluruh dunia. Buah ini sebagian besar terdiri dari air serta kaya akan serat dan vitamin, sehingga sangat cocok dijadikan camilan sehat untuk menjaga tubuh tetap fit setiap hari."
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:lineSpacingExtra="6dp" />
@@ -101,7 +101,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1. Apel Bisa Berenang! 🌊"
+                    android:text="Manfaat Utama"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -111,51 +111,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="  Pernah tidak kamu mencoba memasukkan apel ke dalam baskom berisi air? Coba deh, apelnya pasti mengapung dan tidak tenggelam! Kenapa ya? Rahasianya adalah karena 25% bagian dari buah apel sebenarnya berisi udara. Jadi, apel punya pelampung alami di dalamnya!."
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:lineSpacingExtra="6dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2. Punya Ribuan Saudara Kembar 👩‍👩‍👦‍👦"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginBottom="12dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="  Kalau di supermarket kita biasanya cuma lihat apel merah dan apel hijau, ternyata di seluruh dunia ada sekitar 7.500 jenis apel yang berbeda! Ada yang warnanya kuning, bahkan ada yang rasanya mirip madu. Kalau kamu mencoba makan satu jenis apel setiap hari, kamu butuh waktu 20 tahun untuk mencicipi semuanya! Banyak sekali, kan?."
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:lineSpacingExtra="6dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="3. Paket Lengkap: Si Sehat yang Punya Aturan Pakai 🎒️"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginBottom="12dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="  Apel itu seperti kotak bekal yang penuh dengan hadiah untuk tubuhmu. Di dalam satu buah apel, tersimpan Vitamin C yang menjaga kamu agar tidak mudah sakit, serta Vitamin B yang bikin kamu selalu bersemangat sepanjang hari. Selain itu, ada serat khusus bernama pektin yang bertugas membuat perutmu selalu nyaman dan bebas sembelit. Bahkan, hebatnya lagi, nutrisi di dalam apel juga bisa menjadi teman baik untuk otakmu agar kamu lebih mudah fokus saat belajar di kelas!"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:lineSpacingExtra="6dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="  Namun, sama seperti pahlawan super yang punya kelemahan, apel juga punya beberapa hal yang harus kita perhatikan. Karena apel mengandung gula alami dan asam, kita tidak boleh malas menyikat gigi setelah memakannya agar kuman tidak membuat gigi kita berlubang. Selain itu, saat asyik makan apel, pastikan untuk selalu membuang biji kecilnya yang berwarna hitam ya, karena biji apel mengandung zat yang tidak baik untuk kesehatan tubuh kita."
+                    android:text="• Melancarkan Pencernaan\n• Menjaga kesehatan jantung\n• Mengontrol berat badan\n• Menurunkan resiko diabetes"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:lineSpacingExtra="6dp" />

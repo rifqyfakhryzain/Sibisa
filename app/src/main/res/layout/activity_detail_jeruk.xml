@@ -80,7 +80,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3 Fakta Singkat"
+                    android:text="Fakta Singkat"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -90,7 +90,7 @@
                     android:id="@+id/tvDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="  Hai Teman-teman! Siapa di sini yang suka makan buah jeruk? Selain rasanya yang manis, asam, dan segar, ternyata jeruk itu buah yang sangat hebat, lho. Yuk, kita intip 3 fakta seru dan unik tentang jeruk yang bakal bikin kamu kagum!"
+                    android:text="Buah jeruk adalah buah segar berbentuk bulat asal Asia yang punya rasa manis dan asam yang menyegarkan. Buah ini kaya akan air dan sangat terkenal sebagai sumber utama Vitamin C yang bikin tubuh tidak mudah sakit."
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:lineSpacingExtra="6dp" />
@@ -98,7 +98,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1. Rahasia Kulit yang Bisa Menangis 😢💨"
+                    android:text="Manfaat Utama"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -108,46 +108,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="  Pernah tidak kamu tidak sengaja meremas kulit jeruk lalu matamu terasa perih? Itu karena kulit jeruk punya kantong-kantong minyak atsiri yang sangat kecil. Saat diperas, minyak itu akan menyemprot keluar seperti cairan pembersih alami. Serunya lagi, wangi dari kulit jeruk ini ternyata sangat tidak disukai oleh nyamuk, lho! Jadi, kulit jeruk bisa jadi losion antinyamuk alami yang aman."
+                    android:text="• Meningkatkan daya tahan tubuh\n• Menjaga kesehatan kulit\n• Melancarkan pencernaan\n• Menjaga kesehatan mata"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:lineSpacingExtra="6dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2. Keluarga Besar Si Asam Manis 🍊🍋"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginBottom="12dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="  Meskipun namanya sama-sama jeruk, ternyata mereka punya keluarga yang sangat besar dan bentuk yang beda-beda! Ada Jeruk Bali yang ukurannya raksasa sebesar kepala kita, ada Jeruk Nipis yang rasanya super asam dan sering dipakai memasak, sampai Jeruk Mandarin yang kecil, manis, dan mudah dikupas. Jadi, kamu tidak akan pernah bosan karena rasanya bermacam-macam!"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:lineSpacingExtra="6dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="3. Paket Lengkap: Si Kebal yang Bikin Perut Sensitif 🎒"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginBottom="12dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="  Jeruk adalah rajanya Vitamin C yang ampuh membuat tubuhmu kuat bagai superhero, sehingga kamu tidak mudah terserang flu atau batuk. Di dalamnya juga ada banyak air dan serat yang bagus untuk melancarkan pencernaanmu. Namun, karena jeruk mengandung asam yang cukup tinggi, kita tidak boleh memakannya terlalu banyak saat perut masih kosong, ya. Rasa asamnya bisa membuat perutmu kaget dan terasa perih atau mulas."
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:lineSpacingExtra="6dp" />
 
                 <View
                     android:layout_width="match_parent"
