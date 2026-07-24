@@ -18,39 +18,72 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
+            android:id="@+id/imgLogo"
             android:layout_width="170dp"
             android:layout_height="170dp"
-            android:src="@drawable/logo_sibisa" />
+            android:src="@drawable/logo_sibisa"
+            android:alpha="0"/>
 
         <TextView
+            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SiBISA"
             android:textStyle="bold"
             android:textColor="#1565C0"
             android:textSize="34sp"
-            android:layout_marginTop="12dp"/>
+            android:layout_marginTop="12dp"
+            android:alpha="0"/>
 
         <TextView
+            android:id="@+id/tvSubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sistem Belajar Bahasa Isyarat"
             android:textSize="18sp"
             android:textColor="#333333"
-            android:layout_marginTop="6dp"/>
+            android:layout_marginTop="6dp"
+            android:alpha="0"/>
 
         <TextView
+            android:id="@+id/tvTagline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Belajar BISINDO dengan Augmented Reality"
             android:textSize="14sp"
             android:textColor="#777777"
-            android:layout_marginTop="4dp"/>
-
-        <ProgressBar
+            android:layout_marginTop="4dp"
+            android:alpha="0"/>
+        <LinearLayout
+            android:id="@+id/loadingDots"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+            <View
+                android:id="@+id/dot1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/dot_loading"/>
+
+            <View
+                android:id="@+id/dot2"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/dot_loading"/>
+
+            <View
+                android:id="@+id/dot3"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/dot_loading"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
