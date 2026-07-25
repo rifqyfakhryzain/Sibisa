@@ -36,11 +36,22 @@ SiBISA menghadirkan media pembelajaran interaktif yang menggabungkan materi pemb
 
 ## 📷 Screenshot
 
-Contoh:
-
-| Home | Kuis | Progress |
-|------|------|----------|
-| ![](screenshots/home.jjpeg) | ![](screenshots/quiz.jjpeg) | ![](screenshots/progress.jpeg) |
+<table>
+  <tr>
+    <td align="center">
+      <img src="screenshots/home.jpeg" width="250"/><br/>
+      <b>Home</b>
+    </td>
+    <td align="center">
+      <img src="screenshots/quiz.jpeg" width="250"/><br/>
+      <b>Kuis</b>
+    </td>
+    <td align="center">
+      <img src="screenshots/progress.jpeg" width="250"/><br/>
+      <b>Progress Belajar</b>
+    </td>
+  </tr>
+</table>
 
 ---
 
