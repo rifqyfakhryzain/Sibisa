@@ -211,10 +211,12 @@
                     android:layout_marginBottom="20dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
-                    <View
+                    <ImageView
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:background="#D3D3D3" /> <!-- Kotak abu-abu di figma -->
+                        android:src="@drawable/ic_info"
+                        android:contentDescription="Tentang"
+                        app:tint="@android:color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -233,10 +235,12 @@
                     android:layout_marginBottom="20dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
-                    <View
+                    <ImageView
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:background="#D3D3D3" />
+                        android:src="@drawable/ic_settings"
+                        android:contentDescription="Pengaturan"
+                        app:tint="@android:color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -254,10 +258,12 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
-                    <View
+                    <ImageView
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:background="#D3D3D3" />
+                        android:src="@drawable/ic_logout"
+                        android:contentDescription="Keluar"
+                        app:tint="@android:color/black"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -270,7 +276,7 @@
 
             </LinearLayout>
 
-            <!-- Menambahkan spacer di bawah agar menu terdorong ke atas dengan jarak sedang -->
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="100dp" />
