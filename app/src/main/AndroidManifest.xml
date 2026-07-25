@@ -63,6 +63,7 @@
         </activity>
         <activity
             android:name="com.unity3d.player.UnityPlayerGameActivity" />
+        <activity android:name=".ProgressBelajarActivity"/>
     </application>
 
 </manifest>
