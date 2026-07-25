@@ -36,8 +36,6 @@ SiBISA menghadirkan media pembelajaran interaktif yang menggabungkan materi pemb
 
 ## 📷 Screenshot
 
-> Tambahkan screenshot aplikasi di sini.
-
 Contoh:
 
 | Home | Kuis | Progress |
