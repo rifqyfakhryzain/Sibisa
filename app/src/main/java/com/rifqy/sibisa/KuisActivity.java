@@ -113,10 +113,16 @@ public class KuisActivity extends AppCompatActivity {
 
     private void showScore() {
 
+        // Simpan hasil kuis ke SharedPreferences
+        ProgressManager.saveQuizResult(
+                this,
+                score,
+                questionList.size()
+        );
+
         Intent intent = new Intent(KuisActivity.this, HasilKuisActivity.class);
 
         intent.putExtra("score", score);
-
         intent.putExtra("total", questionList.size());
 
         startActivity(intent);
