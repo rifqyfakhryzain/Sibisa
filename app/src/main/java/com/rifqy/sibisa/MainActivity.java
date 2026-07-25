@@ -19,7 +19,7 @@ import com.unity3d.player.UnityPlayerGameActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private View btnKuis, btnFaktaBuah, btnThirdActivity;
+    private View btnKuis, btnFaktaBuah, btnProgressBelajar;
     private ImageButton btnArCamera;
 
     @Override
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         // Inisialisasi Tombol dari XML
         btnKuis = findViewById(R.id.btnKuis);
         btnFaktaBuah = findViewById(R.id.btnFaktaBuah);
-        btnThirdActivity = findViewById(R.id.btnThirdActivity);
+        btnProgressBelajar = findViewById(R.id.btnProgressBelajar);
         btnArCamera = findViewById(R.id.btnArCamera);
 
         // Aksi ketika tombol Kuis diklik
@@ -50,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Aksi ketika tombol 3rd Activity diklik
-        if (btnThirdActivity != null) {
-            btnThirdActivity.setOnClickListener(v -> {
-                // Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
-                // startActivity(intent);
+        if (btnProgressBelajar != null) {
+            btnProgressBelajar.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, ProgressBelajarActivity.class);
+                startActivity(intent);
             });
         }
 
