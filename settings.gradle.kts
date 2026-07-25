@@ -15,12 +15,19 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+
     repositories {
         google()
         mavenCentral()
+
+        flatDir {
+            dirs(file("unityLibrary/libs"))
+        }
     }
 }
 
 rootProject.name = "Tubes"
 include(":app")
+include(":unityLibrary")
+include(":unityLibrary:xrmanifest.androidlib")
