@@ -42,7 +42,7 @@ Contoh:
 
 | Home | Kuis | Progress |
 |------|------|----------|
-| ![](screenshots/home.png) | ![](screenshots/quiz.png) | ![](screenshots/progress.png) |
+| ![](screenshots/home.jjpeg) | ![](screenshots/quiz.jjpeg) | ![](screenshots/progress.jpeg) |
 
 ---
 
