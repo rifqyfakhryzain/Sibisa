@@ -11,6 +11,8 @@ public class DetailApelActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_apel);
 
+        ProgressManager.setMateriSelesai(this, "apel");
+
         ImageView btnBack = findViewById(R.id.btnBack);
         if (btnBack != null) {
             btnBack.setOnClickListener(v -> onBackPressed());

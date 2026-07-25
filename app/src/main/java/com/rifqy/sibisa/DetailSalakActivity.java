@@ -11,6 +11,8 @@ public class DetailSalakActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_salak);
 
+        ProgressManager.setMateriSelesai(this, "salak");
+
         ImageView btnBack = findViewById(R.id.btnBack);
         if (btnBack != null) {
             btnBack.setOnClickListener(v -> onBackPressed());

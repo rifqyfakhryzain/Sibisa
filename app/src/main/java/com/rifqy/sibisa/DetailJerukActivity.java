@@ -11,6 +11,8 @@ public class DetailJerukActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_jeruk);
 
+        ProgressManager.setMateriSelesai(this, "jeruk");
+
         ImageView btnBack = findViewById(R.id.btnBack);
         if (btnBack != null) {
             btnBack.setOnClickListener(v -> onBackPressed());

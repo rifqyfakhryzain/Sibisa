@@ -11,6 +11,8 @@ public class DetailManggaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_mangga);
 
+        ProgressManager.setMateriSelesai(this, "mangga");
+
         ImageView btnBack = findViewById(R.id.btnBack);
         if (btnBack != null) {
             btnBack.setOnClickListener(v -> onBackPressed());

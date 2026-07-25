@@ -11,6 +11,8 @@ public class DetailPisangActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_pisang);
 
+        ProgressManager.setMateriSelesai(this, "pisang");
+
         ImageView btnBack = findViewById(R.id.btnBack);
         if (btnBack != null) {
             btnBack.setOnClickListener(v -> onBackPressed());
