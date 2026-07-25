@@ -1,0 +1,8 @@
+# Exclude generated Unity native code from GitHub language statistics
+unityLibrary/src/main/Il2CppOutputProject/** linguist-vendored
+unityLibrary/src/main/jniLibs/** linguist-vendored
+
+# Exclude Unity generated folders
+unityLibrary/build/** linguist-vendored
+unityLibrary/symbols/** linguist-vendored
+shared/** linguist-vendored
