@@ -15,6 +15,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import com.unity3d.player.UnityPlayerGameActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,10 +62,17 @@ public class MainActivity extends AppCompatActivity {
             btnArCamera.setOnClickListener(v -> {
                 if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
                         != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(this,
-                            new String[]{Manifest.permission.CAMERA}, 100);
+
+                    ActivityCompat.requestPermissions(
+                            MainActivity.this,
+                            new String[]{Manifest.permission.CAMERA},
+                            100
+                    );
+
                 } else {
-                    openCamera();
+
+                    startUnityAR();
+
                 }
             });
         }
@@ -112,23 +120,33 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void openCamera() {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        } else {
-            Toast.makeText(this, "Tidak ada aplikasi kamera ditemukan", Toast.LENGTH_SHORT).show();
-        }
+    private void startUnityAR() {
+        Intent intent = new Intent(MainActivity.this, UnityPlayerGameActivity.class);
+        startActivity(intent);
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode,
+                                           @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
         if (requestCode == 100) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                openCamera();
+
+            if (grantResults.length > 0 &&
+                    grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                startUnityAR();
+
             } else {
-                Toast.makeText(this, "Izin kamera diperlukan untuk fitur ini", Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(
+                        this,
+                        "Izin kamera diperlukan untuk fitur AR",
+                        Toast.LENGTH_SHORT
+                ).show();
+
             }
         }
     }
