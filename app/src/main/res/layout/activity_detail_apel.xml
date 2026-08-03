@@ -74,47 +74,48 @@
             <!-- Bagian Bawah: Container Putih dengan Border Hitam -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="32dp"
                 android:background="@drawable/bg_detail_description"
                 android:orientation="vertical"
-                android:padding="32dp">
+                android:padding="24dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
                     android:text="Fakta Singkat"
                     android:textColor="@color/black"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="12dp"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:lineSpacingExtra="6dp"
                     android:text="Apel adalah buah manis dan renyah asal Asia Tengah yang punya ribuan jenis di seluruh dunia. Buah ini sebagian besar terdiri dari air serta kaya akan serat dan vitamin, sehingga sangat cocok dijadikan camilan sehat untuk menjaga tubuh tetap fit setiap hari."
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:lineSpacingExtra="6dp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="12dp"
                     android:text="Manfaat Utama"
                     android:textColor="@color/black"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginBottom="12dp"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:lineSpacingExtra="6dp"
                     android:text="• Melancarkan Pencernaan\n• Menjaga kesehatan jantung\n• Mengontrol berat badan\n• Menurunkan resiko diabetes"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:lineSpacingExtra="6dp" />
+                    android:textSize="18sp" />
 
                 <!-- Spacer bawah agar terlihat rapi -->
                 <View
