@@ -49,6 +49,21 @@
         <activity
             android:name=".DetailSalakActivity"
             android:exported="false" />
+        <activity
+            android:name=".DetailPirActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailNanasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailLeciActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailAnggurActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailSemangkaActivity"
+            android:exported="false" />
         <activity android:name=".HasilKuisActivity" />
         <activity
             android:name=".SplashActivity"

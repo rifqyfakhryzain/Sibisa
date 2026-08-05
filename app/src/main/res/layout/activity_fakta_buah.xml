@@ -122,6 +122,71 @@
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
+            <!-- Pir -->
+            <TextView
+                android:id="@+id/itemPir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_fruit_item"
+                android:padding="20dp"
+                android:text="Pir"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- Nanas -->
+            <TextView
+                android:id="@+id/itemNanas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_fruit_item"
+                android:padding="20dp"
+                android:text="Nanas"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- Leci -->
+            <TextView
+                android:id="@+id/itemLeci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_fruit_item"
+                android:padding="20dp"
+                android:text="Leci"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- Anggur -->
+            <TextView
+                android:id="@+id/itemAnggur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_fruit_item"
+                android:padding="20dp"
+                android:text="Anggur"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- Semangka -->
+            <TextView
+                android:id="@+id/itemSemangka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_fruit_item"
+                android:padding="20dp"
+                android:text="Semangka"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
         </LinearLayout>
     </ScrollView>
 

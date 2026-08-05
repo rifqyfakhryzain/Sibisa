@@ -24,6 +24,11 @@ public class FaktaBuahActivity extends AppCompatActivity {
         TextView itemPisang = findViewById(R.id.itemPisang);
         TextView itemMangga = findViewById(R.id.itemMangga);
         TextView itemSalak = findViewById(R.id.itemSalak);
+        TextView itemPir = findViewById(R.id.itemPir);
+        TextView itemNanas = findViewById(R.id.itemNanas);
+        TextView itemLeci = findViewById(R.id.itemLeci);
+        TextView itemAnggur = findViewById(R.id.itemAnggur);
+        TextView itemSemangka = findViewById(R.id.itemSemangka);
 
         // Set click listener untuk item Apel
         if (itemApel != null) {
@@ -57,6 +62,41 @@ public class FaktaBuahActivity extends AppCompatActivity {
         if (itemSalak != null) {
             itemSalak.setOnClickListener(v -> {
                 Intent intent = new Intent(FaktaBuahActivity.this, DetailSalakActivity.class);
+                startActivity(intent);
+            });
+        }
+
+        if (itemPir != null) {
+            itemPir.setOnClickListener(v -> {
+                Intent intent = new Intent(FaktaBuahActivity.this, DetailPirActivity.class);
+                startActivity(intent);
+            });
+        }
+
+        if (itemNanas != null) {
+            itemNanas.setOnClickListener(v -> {
+                Intent intent = new Intent(FaktaBuahActivity.this, DetailNanasActivity.class);
+                startActivity(intent);
+            });
+        }
+
+        if (itemLeci != null) {
+            itemLeci.setOnClickListener(v -> {
+                Intent intent = new Intent(FaktaBuahActivity.this, DetailLeciActivity.class);
+                startActivity(intent);
+            });
+        }
+
+        if (itemAnggur != null) {
+            itemAnggur.setOnClickListener(v -> {
+                Intent intent = new Intent(FaktaBuahActivity.this, DetailAnggurActivity.class);
+                startActivity(intent);
+            });
+        }
+
+        if (itemSemangka != null) {
+            itemSemangka.setOnClickListener(v -> {
+                Intent intent = new Intent(FaktaBuahActivity.this, DetailSemangkaActivity.class);
                 startActivity(intent);
             });
         }
